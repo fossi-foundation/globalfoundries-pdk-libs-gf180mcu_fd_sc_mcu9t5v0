@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__ADDH_1_V
 `define GF180MCU_FD_SC_MCU9T5V0__ADDH_1_V
 
-`include "gf180mcu_fd_sc_mcu9t5v0__addh.v"
+`include "gf180mcu_fd_sc_mcu9t5v0__addh_func.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__addh_1( CO, A, B, S, VDD, VSS );

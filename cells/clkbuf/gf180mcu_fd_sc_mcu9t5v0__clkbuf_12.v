@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__CLKBUF_12_V
 `define GF180MCU_FD_SC_MCU9T5V0__CLKBUF_12_V
 
-`include "gf180mcu_fd_sc_mcu9t5v0__clkbuf.v"
+`include "gf180mcu_fd_sc_mcu9t5v0__clkbuf_func.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__clkbuf_12( I, Z, VDD, VSS );

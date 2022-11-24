@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__OAI33_2_V
 `define GF180MCU_FD_SC_MCU9T5V0__OAI33_2_V
 
-`include "gf180mcu_fd_sc_mcu9t5v0__oai33.v"
+`include "gf180mcu_fd_sc_mcu9t5v0__oai33_func.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__oai33_2( B3, B2, B1, ZN, A3, A2, A1, VDD, VSS );

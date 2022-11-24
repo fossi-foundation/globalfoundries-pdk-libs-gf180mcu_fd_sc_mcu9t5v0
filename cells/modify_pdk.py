@@ -11,7 +11,7 @@ for cells in pdk_cells:
         func_file_path = glob.glob(f"{cells}/gf180mcu_fd_sc_mcu9t5v0__{cells}*.functional.v")[0]
         beh_pp_file_path = glob.glob(f"{cells}/gf180mcu_fd_sc_mcu9t5v0__{cells}*.behavioral.pp.v")
         beh_file_path = glob.glob(f"{cells}/gf180mcu_fd_sc_mcu9t5v0__{cells}*.behavioral.v")
-        base_file_path = f"{cells}/gf180mcu_fd_sc_mcu9t5v0__{cells}.v"
+        base_file_path = f"{cells}/gf180mcu_fd_sc_mcu9t5v0__{cells}_func.v"
         pp_file = open(func_pp_file_path, "r")
         ref_file = open(func_file_path, "r")
         base_file = open(base_file_path, "w")
@@ -85,7 +85,7 @@ for cells in pdk_cells:
                     beh_base_file.write("\n")
                     beh_base_file.write("`ifndef " + f"GF180MCU_FD_SC_MCU9T5V0__{cell_name}_V\n".upper())
                     beh_base_file.write("`define " + f"GF180MCU_FD_SC_MCU9T5V0__{cell_name}_V\n\n".upper())
-                    beh_base_file.write(f"`include \"gf180mcu_fd_sc_mcu9t5v0__{cells}.v\"\n\n")
+                    beh_base_file.write(f"`include \"gf180mcu_fd_sc_mcu9t5v0__{cells}_func.v\"\n\n")
                     beh_base_file.write("`ifdef USE_POWER_PINS\n")
                 elif line.startswith("module"):
                     beh_base_file.write(module)
