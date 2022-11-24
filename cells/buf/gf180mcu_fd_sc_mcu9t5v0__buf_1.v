@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__BUF_1_V
 `define GF180MCU_FD_SC_MCU9T5V0__BUF_1_V
 
-`include gf180mcu_fd_sc_mcu9t5v0__buf.v
+`include "gf180mcu_fd_sc_mcu9t5v0__buf.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__buf_1( I, Z, VDD, VSS );

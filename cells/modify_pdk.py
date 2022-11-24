@@ -85,7 +85,7 @@ for cells in pdk_cells:
                     beh_base_file.write("\n")
                     beh_base_file.write("`ifndef " + f"GF180MCU_FD_SC_MCU9T5V0__{cell_name}_V\n".upper())
                     beh_base_file.write("`define " + f"GF180MCU_FD_SC_MCU9T5V0__{cell_name}_V\n\n".upper())
-                    beh_base_file.write(f"`include gf180mcu_fd_sc_mcu9t5v0__{cells}.v\n\n")
+                    beh_base_file.write(f"`include \"gf180mcu_fd_sc_mcu9t5v0__{cells}.v\"\n\n")
                     beh_base_file.write("`ifdef USE_POWER_PINS\n")
                 elif line.startswith("module"):
                     beh_base_file.write(module)

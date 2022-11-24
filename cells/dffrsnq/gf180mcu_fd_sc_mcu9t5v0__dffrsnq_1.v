@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__DFFRSNQ_1_V
 `define GF180MCU_FD_SC_MCU9T5V0__DFFRSNQ_1_V
 
-`include gf180mcu_fd_sc_mcu9t5v0__dffrsnq.v
+`include "gf180mcu_fd_sc_mcu9t5v0__dffrsnq.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__dffrsnq_1( CLK, D, SETN, RN, Q, VDD, VSS );
