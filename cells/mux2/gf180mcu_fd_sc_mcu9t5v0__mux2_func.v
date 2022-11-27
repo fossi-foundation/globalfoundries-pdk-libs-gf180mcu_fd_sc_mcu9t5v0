@@ -15,6 +15,8 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__MUX2_V
 `define GF180MCU_FD_SC_MCU9T5V0__MUX2_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__mux2_func( Z, I1, S, I0, VDD, VSS );
 inout VDD, VSS;
@@ -28,13 +30,13 @@ output Z;
 
 	and MGM_BG_0( Z_row1, I0, I1 );
 
-	wire S_inv_for_gf180mcu_fd_sc_mcu9t5v0__mux2_4;
+	wire S_inv_for_gf180mcu_fd_sc_mcu9t5v0__mux2_2;
 
-	not MGM_BG_1( S_inv_for_gf180mcu_fd_sc_mcu9t5v0__mux2_4, S );
+	not MGM_BG_1( S_inv_for_gf180mcu_fd_sc_mcu9t5v0__mux2_2, S );
 
 	wire Z_row2;
 
-	and MGM_BG_2( Z_row2, S_inv_for_gf180mcu_fd_sc_mcu9t5v0__mux2_4, I0 );
+	and MGM_BG_2( Z_row2, S_inv_for_gf180mcu_fd_sc_mcu9t5v0__mux2_2, I0 );
 
 	wire Z_row3;
 

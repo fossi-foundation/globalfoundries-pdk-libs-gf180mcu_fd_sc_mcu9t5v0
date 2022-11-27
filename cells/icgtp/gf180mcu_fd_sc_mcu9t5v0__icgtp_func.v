@@ -15,6 +15,8 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__ICGTP_V
 `define GF180MCU_FD_SC_MCU9T5V0__ICGTP_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__icgtp_func( TE, E, CLK, Q, VDD, VSS, notifier );
 inout VDD, VSS;
@@ -28,7 +30,7 @@ output Q;
 
 	or MGM_BG_1( MGM_D0, E, TE );
 
-	UDP_GF018hv5v_mcu_sc9_TT_1P8V_25C_verilog_nonpg_MGM_N_IQ_LATCH_UDP( IQ2, 1'b0, 1'b0, MGM_EN0, MGM_D0, notifier );
+	gf180mcu_fd_sc_mcu9t5v0__N_IQ_LATCH_udp( IQ2, 1'b0, 1'b0, MGM_EN0, MGM_D0, notifier );
 
 	and MGM_BG_2( Q, CLK, IQ2 );
 

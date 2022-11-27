@@ -15,6 +15,8 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__SDFFRSNQ_V
 `define GF180MCU_FD_SC_MCU9T5V0__SDFFRSNQ_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_func( SE, SI, D, CLK, SETN, RN, Q, VDD, VSS, notifier );
 inout VDD, VSS;
@@ -28,33 +30,33 @@ output Q;
 
 	not MGM_BG_1( MGM_C0, SETN );
 
-	wire D_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4;
+	wire D_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2;
 
-	not MGM_BG_2( D_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4, D );
+	not MGM_BG_2( D_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2, D );
 
-	wire SE_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4;
+	wire SE_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2;
 
-	not MGM_BG_3( SE_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4, SE );
+	not MGM_BG_3( SE_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2, SE );
 
 	wire MGM_D0_row1;
 
-	and MGM_BG_4( MGM_D0_row1, D_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4, SE_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4 );
+	and MGM_BG_4( MGM_D0_row1, D_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2, SE_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2 );
 
-	wire SI_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4;
+	wire SI_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2;
 
-	not MGM_BG_5( SI_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4, SI );
+	not MGM_BG_5( SI_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2, SI );
 
 	wire MGM_D0_row2;
 
-	and MGM_BG_6( MGM_D0_row2, D_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4, SI_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4 );
+	and MGM_BG_6( MGM_D0_row2, D_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2, SI_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2 );
 
 	wire MGM_D0_row3;
 
-	and MGM_BG_7( MGM_D0_row3, SI_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_4, SE );
+	and MGM_BG_7( MGM_D0_row3, SI_inv_for_gf180mcu_fd_sc_mcu9t5v0__sdffrsnq_2, SE );
 
 	or MGM_BG_8( MGM_D0, MGM_D0_row1, MGM_D0_row2, MGM_D0_row3 );
 
-	UDP_GF018hv5v_mcu_sc9_TT_1P8V_25C_verilog_nonpg_MGM_HN_IQ_FF_UDP( IQ1, MGM_C0, MGM_P0, CLK, MGM_D0, notifier );
+	gf180mcu_fd_sc_mcu9t5v0__HN_IQ_FF_udp( IQ1, MGM_C0, MGM_P0, CLK, MGM_D0, notifier );
 
 	not MGM_BG_9( Q, IQ1 );
 

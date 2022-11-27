@@ -15,36 +15,38 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__OAI211_V
 `define GF180MCU_FD_SC_MCU9T5V0__OAI211_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__oai211_func( A2, ZN, A1, B, C, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu9t5v0__oai211_func( ZN, A2, A1, B, C );
+module gf180mcu_fd_sc_mcu9t5v0__oai211_func( A2, ZN, A1, B, C );
 `endif // If not USE_POWER_PINS
 input A1, A2, B, C;
 output ZN;
 
-	wire A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4;
+	wire A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1;
 
-	not MGM_BG_0( A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4, A1 );
+	not MGM_BG_0( A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1, A1 );
 
-	wire A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4;
+	wire A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1;
 
-	not MGM_BG_1( A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4, A2 );
+	not MGM_BG_1( A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1, A2 );
 
 	wire ZN_row1;
 
-	and MGM_BG_2( ZN_row1, A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4, A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4 );
+	and MGM_BG_2( ZN_row1, A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1, A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1 );
 
-	wire B_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4;
+	wire B_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1;
 
-	not MGM_BG_3( B_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4, B );
+	not MGM_BG_3( B_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1, B );
 
-	wire C_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4;
+	wire C_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1;
 
-	not MGM_BG_4( C_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4, C );
+	not MGM_BG_4( C_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1, C );
 
-	or MGM_BG_5( ZN, ZN_row1, B_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4, C_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_4 );
+	or MGM_BG_5( ZN, ZN_row1, B_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1, C_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai211_1 );
 
 endmodule
 `endif // GF180MCU_FD_SC_MCU9T5V0__OAI211_V

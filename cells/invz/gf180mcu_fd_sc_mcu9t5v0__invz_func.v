@@ -15,11 +15,13 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__INVZ_V
 `define GF180MCU_FD_SC_MCU9T5V0__INVZ_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__invz_func( EN, I, ZN, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu9t5v0__invz_func( EN, ZN, I );
+module gf180mcu_fd_sc_mcu9t5v0__invz_func( EN, I, ZN );
 `endif // If not USE_POWER_PINS
 input EN, I;
 output ZN;
@@ -28,11 +30,11 @@ output ZN;
 
 	wire MGM_WB_1;
 
-	wire I_inv_for_gf180mcu_fd_sc_mcu9t5v0__invz_2;
+	wire I_inv_for_gf180mcu_fd_sc_mcu9t5v0__invz_16;
 
-	not MGM_BG_0( I_inv_for_gf180mcu_fd_sc_mcu9t5v0__invz_2, I );
+	not MGM_BG_0( I_inv_for_gf180mcu_fd_sc_mcu9t5v0__invz_16, I );
 
-	and MGM_BG_1( MGM_WB_0, I_inv_for_gf180mcu_fd_sc_mcu9t5v0__invz_2, EN );
+	and MGM_BG_1( MGM_WB_0, I_inv_for_gf180mcu_fd_sc_mcu9t5v0__invz_16, EN );
 
 	not MGM_BG_2( MGM_WB_1, EN );
 

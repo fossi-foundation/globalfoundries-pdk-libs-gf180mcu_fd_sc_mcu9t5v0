@@ -15,6 +15,8 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__XNOR2_V
 `define GF180MCU_FD_SC_MCU9T5V0__XNOR2_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__xnor2_func( A2, A1, ZN, VDD, VSS );
 inout VDD, VSS;
@@ -28,17 +30,17 @@ output ZN;
 
 	and MGM_BG_0( ZN_row1, A1, A2 );
 
-	wire A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_2;
+	wire A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_4;
 
-	not MGM_BG_1( A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_2, A1 );
+	not MGM_BG_1( A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_4, A1 );
 
-	wire A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_2;
+	wire A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_4;
 
-	not MGM_BG_2( A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_2, A2 );
+	not MGM_BG_2( A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_4, A2 );
 
 	wire ZN_row2;
 
-	and MGM_BG_3( ZN_row2, A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_2, A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_2 );
+	and MGM_BG_3( ZN_row2, A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_4, A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__xnor2_4 );
 
 	or MGM_BG_4( ZN, ZN_row1, ZN_row2 );
 

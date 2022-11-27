@@ -15,42 +15,44 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__OAI32_V
 `define GF180MCU_FD_SC_MCU9T5V0__OAI32_V
 
+`include "../udp/udp_primitives.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__oai32_func( A3, A2, A1, ZN, B2, B1, VDD, VSS );
 inout VDD, VSS;
 `else // If not USE_POWER_PINS
-module gf180mcu_fd_sc_mcu9t5v0__oai32_func( A3, A2, A1, ZN, B1, B2 );
+module gf180mcu_fd_sc_mcu9t5v0__oai32_func( A3, A2, A1, ZN, B2, B1 );
 `endif // If not USE_POWER_PINS
 input A1, A2, A3, B1, B2;
 output ZN;
 
-	wire A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1;
+	wire A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2;
 
-	not MGM_BG_0( A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1, A1 );
+	not MGM_BG_0( A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2, A1 );
 
-	wire A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1;
+	wire A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2;
 
-	not MGM_BG_1( A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1, A2 );
+	not MGM_BG_1( A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2, A2 );
 
-	wire A3_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1;
+	wire A3_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2;
 
-	not MGM_BG_2( A3_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1, A3 );
+	not MGM_BG_2( A3_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2, A3 );
 
 	wire ZN_row1;
 
-	and MGM_BG_3( ZN_row1, A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1, A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1, A3_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1 );
+	and MGM_BG_3( ZN_row1, A1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2, A2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2, A3_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2 );
 
-	wire B1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1;
+	wire B1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2;
 
-	not MGM_BG_4( B1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1, B1 );
+	not MGM_BG_4( B1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2, B1 );
 
-	wire B2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1;
+	wire B2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2;
 
-	not MGM_BG_5( B2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1, B2 );
+	not MGM_BG_5( B2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2, B2 );
 
 	wire ZN_row2;
 
-	and MGM_BG_6( ZN_row2, B1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1, B2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_1 );
+	and MGM_BG_6( ZN_row2, B1_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2, B2_inv_for_gf180mcu_fd_sc_mcu9t5v0__oai32_2 );
 
 	or MGM_BG_7( ZN, ZN_row1, ZN_row2 );
 
