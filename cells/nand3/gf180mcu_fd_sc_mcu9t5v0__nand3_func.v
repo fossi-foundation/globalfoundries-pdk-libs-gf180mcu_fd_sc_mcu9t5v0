@@ -15,8 +15,6 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__NAND3_V
 `define GF180MCU_FD_SC_MCU9T5V0__NAND3_V
 
-`include "../udp/udp_primitives.v"
-
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__nand3_func( A2, A3, ZN, A1, VDD, VSS );
 inout VDD, VSS;

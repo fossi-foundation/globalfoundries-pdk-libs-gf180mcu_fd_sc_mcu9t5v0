@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__SDFFQ_V
 `define GF180MCU_FD_SC_MCU9T5V0__SDFFQ_V
 
-`include "../udp/udp_primitives.v"
+`include "../../models/N_IQ_FF_udp/gf180mcu_fd_sc_mcu9t5v0__N_IQ_FF_udp.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__sdffq_func( SE, SI, D, CLK, Q, VDD, VSS, notifier );
