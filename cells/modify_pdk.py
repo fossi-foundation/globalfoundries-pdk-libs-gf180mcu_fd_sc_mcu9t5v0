@@ -35,13 +35,13 @@ for cells in pdk_cells:
                 udp_line = num
                 args_udp = re.search(".*UDP(\(.*;)", line).group(1)
                 if "UDP_GF018hv5v_mcu_sc9_TT_5P0V_25C_verilog_pg_MGM_N_IQ_FF_UDP" in line:
-                    udp_data = "gf180mcu_fd_sc_mcu9t5v0__N_IQ_FF_udp"
+                    udp_data = "gf180mcu_fd_sc_mcu9t5v0__udp_n_iq_ff"
                 elif "UDP_GF018hv5v_mcu_sc9_TT_5P0V_25C_verilog_pg_MGM_HN_IQ_FF_UDP" in line:
-                    udp_data = "gf180mcu_fd_sc_mcu9t5v0__HN_IQ_FF_udp"
+                    udp_data = "gf180mcu_fd_sc_mcu9t5v0__udp_hn_iq_ff"
                 elif "UDP_GF018hv5v_mcu_sc9_TT_5P0V_25C_verilog_pg_MGM_N_IQ_LATCH_UDP" in line:
-                    udp_data = "gf180mcu_fd_sc_mcu9t5v0__N_IQ_LATCH_udp"
+                    udp_data = "gf180mcu_fd_sc_mcu9t5v0__udp_n_iq_latch"
                 elif "UDP_GF018hv5v_mcu_sc9_TT_5P0V_25C_verilog_pg_MGM_HN_IQ_LATCH_UDP" in line:
-                    udp_data = "gf180mcu_fd_sc_mcu9t5v0__HN_IQ_LATCH_udp"
+                    udp_data = "gf180mcu_fd_sc_mcu9t5v0__udp_hn_iq_latch"
         pp_file.close()
 
         for num, line in enumerate(ref_file, 1):
@@ -52,14 +52,14 @@ for cells in pdk_cells:
                 base_file.write("`ifndef " + f"GF180MCU_FD_SC_MCU9T5V0__{cells}_V\n".upper())
                 base_file.write("`define " + f"GF180MCU_FD_SC_MCU9T5V0__{cells}_V\n\n".upper())
                 if udp_data:
-                    if "N_IQ_FF_udp" in udp_data:
-                        base_file.write(f"`include \"../../models/N_IQ_FF_udp/{udp_data}.v\"\n\n")
-                    elif "N_IQ_FF_udp" in udp_data:
-                        base_file.write(f"`include \"../../models/HN_IQ_FF_udp/{udp_data}.v\"\n\n")
-                    elif "N_IQ_FF_udp" in udp_data:
-                        base_file.write(f"`include \"../../models/N_IQ_LATCH_udp/{udp_data}.v\"\n\n")
-                    elif "N_IQ_FF_udp" in udp_data:
-                        base_file.write(f"`include \"../../models/HN_IQ_LATCH_udp/{udp_data}.v\"\n\n")
+                    if "udp_n_iq_ff" in udp_data:
+                        base_file.write(f"`include \"../../models/udp_n_iq_ff/{udp_data}.v\"\n\n")
+                    elif "udp_hn_iq_ff" in udp_data:
+                        base_file.write(f"`include \"../../models/udp_hn_iq_ff/{udp_data}.v\"\n\n")
+                    elif "udp_n_iq_latch" in udp_data:
+                        base_file.write(f"`include \"../../models/udp_n_iq_latch/{udp_data}.v\"\n\n")
+                    elif "udp_hn_iq_latch" in udp_data:
+                        base_file.write(f"`include \"../../models/udp_hn_iq_latch/{udp_data}.v\"\n\n")
                 base_file.write("`ifdef USE_POWER_PINS\n")
             elif line.startswith("module"):
                 base_file.write(re.sub("_*[0-9]*\(", "_func(", module))

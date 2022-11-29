@@ -15,7 +15,7 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__SDFFSNQ_V
 `define GF180MCU_FD_SC_MCU9T5V0__SDFFSNQ_V
 
-`include "../../models/N_IQ_FF_udp/gf180mcu_fd_sc_mcu9t5v0__N_IQ_FF_udp.v"
+`include "../../models/udp_n_iq_ff/gf180mcu_fd_sc_mcu9t5v0__udp_n_iq_ff.v"
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__sdffsnq_func( SE, SI, D, CLK, SETN, Q, VDD, VSS, notifier );
@@ -54,7 +54,7 @@ output Q;
 
 	or MGM_BG_7( MGM_D0, MGM_D0_row1, MGM_D0_row2, MGM_D0_row3 );
 
-	gf180mcu_fd_sc_mcu9t5v0__N_IQ_FF_udp( IQ1, MGM_C0, 1'b0, CLK, MGM_D0, notifier );
+	gf180mcu_fd_sc_mcu9t5v0__udp_n_iq_ff( IQ1, MGM_C0, 1'b0, CLK, MGM_D0, notifier );
 
 	not MGM_BG_8( Q, IQ1 );
 

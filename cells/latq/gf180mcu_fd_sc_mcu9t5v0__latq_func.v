@@ -15,6 +15,8 @@
 `ifndef GF180MCU_FD_SC_MCU9T5V0__LATQ_V
 `define GF180MCU_FD_SC_MCU9T5V0__LATQ_V
 
+`include "../../models/udp_n_iq_latch/gf180mcu_fd_sc_mcu9t5v0__udp_n_iq_latch.v"
+
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__latq_func( E, D, Q, VDD, VSS, notifier );
 inout VDD, VSS;
@@ -26,7 +28,7 @@ output Q;
 
 	not MGM_BG_0( MGM_D0, D );
 
-	gf180mcu_fd_sc_mcu9t5v0__N_IQ_LATCH_udp( IQ1, 1'b0, 1'b0, E, MGM_D0, notifier );
+	gf180mcu_fd_sc_mcu9t5v0__udp_n_iq_latch( IQ1, 1'b0, 1'b0, E, MGM_D0, notifier );
 
 	not MGM_BG_1( Q, IQ1 );
 
