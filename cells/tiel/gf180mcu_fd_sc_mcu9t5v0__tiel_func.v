@@ -26,4 +26,4 @@ output ZN;
 	assign ZN = 1'b0;
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__TIEL_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__TIEL_FUNC_V

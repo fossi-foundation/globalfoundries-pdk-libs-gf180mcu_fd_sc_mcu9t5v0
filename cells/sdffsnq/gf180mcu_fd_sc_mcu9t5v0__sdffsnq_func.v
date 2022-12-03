@@ -59,4 +59,4 @@ output Q;
 	not MGM_BG_8( Q, IQ1 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__SDFFSNQ_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__SDFFSNQ_FUNC_V

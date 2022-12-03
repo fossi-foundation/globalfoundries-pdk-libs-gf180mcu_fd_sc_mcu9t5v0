@@ -23,4 +23,4 @@ module gf180mcu_fd_sc_mcu9t5v0__fill_func(  );
 `endif // If not USE_POWER_PINS
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__FILL_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__FILL_FUNC_V

@@ -35,4 +35,4 @@ output Z;
 	bufif0 MGM_BG_2( Z, MGM_WB_0,MGM_WB_1 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__BUFZ_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__BUFZ_FUNC_V

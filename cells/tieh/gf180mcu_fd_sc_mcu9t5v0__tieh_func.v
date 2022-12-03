@@ -26,4 +26,4 @@ output Z;
 	assign Z = 1'b1;
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__TIEH_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__TIEH_FUNC_V

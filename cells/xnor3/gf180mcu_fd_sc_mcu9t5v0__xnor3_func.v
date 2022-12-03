@@ -55,4 +55,4 @@ output ZN;
 	or MGM_BG_7( ZN, ZN_row1, ZN_row2, ZN_row3, ZN_row4 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__XNOR3_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__XNOR3_FUNC_V

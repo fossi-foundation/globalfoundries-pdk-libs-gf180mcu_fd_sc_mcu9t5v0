@@ -39,4 +39,4 @@ output ZN;
 	bufif0 MGM_BG_3( ZN, MGM_WB_0,MGM_WB_1 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__INVZ_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__INVZ_FUNC_V

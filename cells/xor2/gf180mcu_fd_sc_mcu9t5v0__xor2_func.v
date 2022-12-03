@@ -43,4 +43,4 @@ output Z;
 	or MGM_BG_4( Z, Z_row1, Z_row2 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__XOR2_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__XOR2_FUNC_V

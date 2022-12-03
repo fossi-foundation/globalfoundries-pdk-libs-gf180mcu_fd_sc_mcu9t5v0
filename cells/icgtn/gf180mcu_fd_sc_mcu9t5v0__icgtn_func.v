@@ -37,4 +37,4 @@ output Q;
 	or MGM_BG_2( Q, CLKN, IQ3_inv_for_gf180mcu_fd_sc_mcu9t5v0__icgtn_4 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__ICGTN_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__ICGTN_FUNC_V

@@ -27,4 +27,4 @@ output Z;
 	and MGM_BG_0( Z, A1, A2, A3 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__AND3_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__AND3_FUNC_V

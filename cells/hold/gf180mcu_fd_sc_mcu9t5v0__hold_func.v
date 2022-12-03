@@ -28,4 +28,4 @@ inout Z;
 	buf MGM_BG_1( MGM_WB_0, Z );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__HOLD_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__HOLD_FUNC_V

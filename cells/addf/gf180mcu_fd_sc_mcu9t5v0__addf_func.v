@@ -69,4 +69,4 @@ output CO, S;
 	or MGM_BG_11( S, S_row1, S_row2, S_row3, S_row4 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__ADDF_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__ADDF_FUNC_V

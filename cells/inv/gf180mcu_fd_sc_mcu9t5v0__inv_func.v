@@ -27,4 +27,4 @@ output ZN;
 	not MGM_BG_0( ZN, I );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__INV_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__INV_FUNC_V

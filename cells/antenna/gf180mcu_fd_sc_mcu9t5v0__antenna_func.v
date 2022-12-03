@@ -24,4 +24,4 @@ module gf180mcu_fd_sc_mcu9t5v0__antenna_func( I );
 input I;
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__ANTENNA_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__ANTENNA_FUNC_V

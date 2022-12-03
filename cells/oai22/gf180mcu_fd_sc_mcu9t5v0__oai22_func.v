@@ -51,4 +51,4 @@ output ZN;
 	or MGM_BG_6( ZN, ZN_row1, ZN_row2 );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__OAI22_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__OAI22_FUNC_V

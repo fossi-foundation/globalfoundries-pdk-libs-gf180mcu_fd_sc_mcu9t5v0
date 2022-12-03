@@ -27,4 +27,4 @@ output Z;
 	buf MGM_BG_0( Z, I );
 
 endmodule
-`endif // GF180MCU_FD_SC_MCU9T5V0__DLYC_V
+`endif // GF180MCU_FD_SC_MCU9T5V0__DLYC_FUNC_V
