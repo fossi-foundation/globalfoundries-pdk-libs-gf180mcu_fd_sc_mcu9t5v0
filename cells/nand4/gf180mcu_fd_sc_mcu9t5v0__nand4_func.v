@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-`ifndef GF180MCU_FD_SC_MCU9T5V0__NAND4_V
-`define GF180MCU_FD_SC_MCU9T5V0__NAND4_V
+`ifndef GF180MCU_FD_SC_MCU9T5V0__NAND4_FUNC_V
+`define GF180MCU_FD_SC_MCU9T5V0__NAND4_FUNC_V
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__nand4_func( A3, ZN, A4, A2, A1, VDD, VSS );

@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-`ifndef GF180MCU_FD_SC_MCU9T5V0__DFFNSNQ_V
-`define GF180MCU_FD_SC_MCU9T5V0__DFFNSNQ_V
+`ifndef GF180MCU_FD_SC_MCU9T5V0__DFFNSNQ_FUNC_V
+`define GF180MCU_FD_SC_MCU9T5V0__DFFNSNQ_FUNC_V
 
 `include "../../models/udp_n_iq_ff/gf180mcu_fd_sc_mcu9t5v0__udp_n_iq_ff.v"
 

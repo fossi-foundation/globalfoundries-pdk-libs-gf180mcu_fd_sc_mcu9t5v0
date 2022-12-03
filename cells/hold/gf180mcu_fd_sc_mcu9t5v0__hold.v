@@ -19,10 +19,11 @@
 
 `ifdef USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__hold( Z, VDD, VSS );
-inout Z;
+inout VDD, VSS;
 `else // If not USE_POWER_PINS
 module gf180mcu_fd_sc_mcu9t5v0__hold( Z );
 `endif // If not USE_POWER_PINS
+inout Z;
 
 `ifdef USE_POWER_PINS
   gf180mcu_fd_sc_mcu9t5v0__hold_func gf180mcu_fd_sc_mcu9t5v0__hold_inst(.Z(Z),.VDD(VDD),.VSS(VSS));
