@@ -25,6 +25,7 @@ module gf180mcu_fd_sc_mcu9t5v0__dffnq_4( CLKN, D, Q );
 `endif // If not USE_POWER_PINS
 input CLKN, D;
 output Q;
+reg notifier;
 
 `ifdef USE_POWER_PINS
   gf180mcu_fd_sc_mcu9t5v0__dffnq_func gf180mcu_fd_sc_mcu9t5v0__dffnq_inst(.CLKN(CLKN),.D(D),.Q(Q),.VDD(VDD),.VSS(VSS),.notifier(notifier));

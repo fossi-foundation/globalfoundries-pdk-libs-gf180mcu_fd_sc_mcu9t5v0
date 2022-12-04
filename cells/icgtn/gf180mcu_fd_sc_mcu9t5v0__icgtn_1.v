@@ -25,6 +25,7 @@ module gf180mcu_fd_sc_mcu9t5v0__icgtn_1( TE, E, CLKN, Q );
 `endif // If not USE_POWER_PINS
 input CLKN, E, TE;
 output Q;
+reg notifier;
 
 `ifdef USE_POWER_PINS
   gf180mcu_fd_sc_mcu9t5v0__icgtn_func gf180mcu_fd_sc_mcu9t5v0__icgtn_inst(.TE(TE),.E(E),.CLKN(CLKN),.Q(Q),.VDD(VDD),.VSS(VSS),.notifier(notifier));

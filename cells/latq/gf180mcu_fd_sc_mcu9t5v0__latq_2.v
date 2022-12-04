@@ -25,6 +25,7 @@ module gf180mcu_fd_sc_mcu9t5v0__latq_2( E, D, Q );
 `endif // If not USE_POWER_PINS
 input D, E;
 output Q;
+reg notifier;
 
 `ifdef USE_POWER_PINS
   gf180mcu_fd_sc_mcu9t5v0__latq_func gf180mcu_fd_sc_mcu9t5v0__latq_inst(.E(E),.D(D),.Q(Q),.VDD(VDD),.VSS(VSS),.notifier(notifier));
