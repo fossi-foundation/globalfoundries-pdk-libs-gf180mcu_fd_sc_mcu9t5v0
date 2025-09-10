@@ -28,7 +28,7 @@
         "pin Z": {
             "capacitance": "0.0299",
             "direction": "inout",
-            "driver_type": "bus_gf180mcu_fd_sc_mcu9t5v0__hold",
+            "driver_type": "bus_hold",
             "function": "Z",
             "input_voltage": "default",
             "max_transition": "12",
